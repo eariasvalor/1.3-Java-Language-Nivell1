@@ -6,31 +6,6 @@ import java.util.HashSet;
 public class N1Exercici1 {
     public static void main (String[] args){
         ArrayList<Month> months = new ArrayList<Month>();
-
-        months.add(new Month("Gener"));
-        months.add(new Month("Febrer"));
-        months.add(new Month("Març"));
-        months.add(new Month("Abril"));
-        months.add(new Month("Maig"));
-        months.add(new Month("Juny"));
-        months.add(new Month("Juliol"));
-        months.add(new Month("Setembre"));
-        months.add(new Month("Octubre"));
-        months.add(new Month("Novembre"));
-        months.add(new Month("Desembre"));
-
-        for (Month m : months) {
-            System.out.println(m.getName());
-        }
-
-        System.out.println("");
-
-        months.add(7, new Month("Agost"));
-
-        for (Month m : months) {
-            System.out.println(m.getName());
-        }
-
         HashSet<Month> months2 = new HashSet<Month>();
 
         Month m1 = new Month("Gener");
@@ -44,6 +19,34 @@ public class N1Exercici1 {
         Month m10 = new Month("Octubre");
         Month m11 = new Month("Novembre");
         Month m12 = new Month("Desembre");
+
+        months.add(m1);
+        months.add(m2);
+        months.add(m3);
+        months.add(m4);
+        months.add(m5);
+        months.add(m6);
+        months.add(m7);
+        months.add(m9);
+        months.add(m10);
+        months.add(m11);
+        months.add(m12);
+
+        for (Month m : months) {
+            System.out.println(m.getName());
+        }
+
+        System.out.println();
+
+        //adding the month of August on position 7
+        months.add(7, new Month("Agost"));
+
+        for (Month m : months) {
+            System.out.println(m.getName());
+        }
+
+
+
 
         months2.add(m1);
         months2.add(m2);
@@ -60,6 +63,9 @@ public class N1Exercici1 {
 
         Month m8 = new Month("Agost");
         months2.add(m8);
+
+        /*added a second object with the name "Agost", but the hashSet
+        doesn't add it because of the overrode methods equals and hashCode.*/
         months2.add(new Month("Agost"));
 
         System.out.println();
@@ -68,6 +74,7 @@ public class N1Exercici1 {
         for (Month m : months2) {
             System.out.println(m.getName());
         }
+
         boolean containsAgost = months2.contains(m8);
         System.out.println(containsAgost);
     }

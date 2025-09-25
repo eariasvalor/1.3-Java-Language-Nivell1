@@ -13,24 +13,45 @@ public class Month {
         return this.name;
     }
 
-    //I override the methods equals and hashCode to prevent hashset to admit two Objects with the same name.
-    @Override
+    //I override the method equals to tell hashset that both are the same object.
+    /*@Override
     public boolean equals(Object o) {
         boolean answer = false;
-        if (this == o) {
-            answer = true;
-        }
-        if (!(o instanceof Month)) {
+
+        if (o instanceof  Month) {
+            Month month = (Month) o;
+
+            if (this.name == month.name) {
+                answer = true;
+            } else {
+                answer = false;
+            }
+        } else {
             answer = false;
         }
-        Month month = (Month) o;
-        answer = Objects.equals(name, month.name);
 
         return answer;
     }
 
+
+
     @Override
     public int hashCode() {
         return Objects.hash(name);
+    }
+
+
+     */
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Month month = (Month) o;
+        return Objects.equals(name, month.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(name);
     }
 }
