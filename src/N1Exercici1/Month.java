@@ -45,12 +45,17 @@ public class Month {
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Month)) {
+            return false;
+        }
         Month month = (Month) o;
         return Objects.equals(name, month.name);
     }
 
-    @Override
+@Override
     public int hashCode() {
         return Objects.hashCode(name);
     }
