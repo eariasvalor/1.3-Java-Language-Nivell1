@@ -22,6 +22,12 @@ public class N1Exercici1 {
             System.out.println(m.getName());
         }
 
+        System.out.println();
 
+        months.add(7, new Month("Agost"));
+
+        for (Month m : months) {
+            System.out.println(m.getName());
+        }
     }
 }
