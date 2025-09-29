@@ -8,17 +8,17 @@ public class N1Exercici1 {
         ArrayList<Month> months = new ArrayList<Month>();
         HashSet<Month> months2 = new HashSet<Month>();
 
-        Month m1 = new Month("Gener");
-        Month m2 = new Month("Febrer");
-        Month m3 = new Month("Març");
-        Month m4 = new Month("Abril");
-        Month m5 = new Month("Maig");
-        Month m6 = new Month("Juny");
-        Month m7 = new Month("Juliol");
-        Month m9 = new Month("Setembre");
-        Month m10 = new Month("Octubre");
-        Month m11 = new Month("Novembre");
-        Month m12 = new Month("Desembre");
+        Month m1 = new Month("January");
+        Month m2 = new Month("February");
+        Month m3 = new Month("March");
+        Month m4 = new Month("April");
+        Month m5 = new Month("May");
+        Month m6 = new Month("June");
+        Month m7 = new Month("July");
+        Month m9 = new Month("September");
+        Month m10 = new Month("October");
+        Month m11 = new Month("November");
+        Month m12 = new Month("December");
 
         months.add(m1);
         months.add(m2);
@@ -39,7 +39,7 @@ public class N1Exercici1 {
         System.out.println();
 
         //adding the month of August on position 7
-        months.add(7, new Month("Agost"));
+        months.add(7, new Month("August"));
 
         for (Month m : months) {
             System.out.println(m.getName());
@@ -61,12 +61,12 @@ public class N1Exercici1 {
         months2.add(m12);
 
 
-        Month m8 = new Month("Agost");
+        Month m8 = new Month("August");
         months2.add(m8);
 
-        /*added a second object with the name "Agost", but the hashSet
+        /*added a second object with the name "August", but the hashSet
         doesn't add it because of the overrode methods equals and hashCode.*/
-        months2.add(new Month("Agost"));
+        months2.add(new Month("August"));
 
         System.out.println();
         System.out.println("HashSet:");
