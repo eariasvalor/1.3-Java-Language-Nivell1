@@ -2,11 +2,13 @@ package N1Exercici1;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class N1Exercici1 {
     public static void main (String[] args){
         ArrayList<Month> months = new ArrayList<Month>();
         HashSet<Month> months2 = new HashSet<Month>();
+
 
         Month m1 = new Month("January");
         Month m2 = new Month("February");
@@ -75,8 +77,16 @@ public class N1Exercici1 {
             System.out.println(m.getName());
         }
 
-        boolean containsAgost = months2.contains(m8);
-        System.out.println(containsAgost);
+        //to check if August is added.
+        boolean containsAugust = months2.contains(m8);
+        System.out.println(containsAugust);
+
+        Iterator<Month> it = months2.iterator();
+        while (it.hasNext()) {
+            Month m = it.next();
+            System.out.println(m.getName());
+        }
+
     }
 
 
