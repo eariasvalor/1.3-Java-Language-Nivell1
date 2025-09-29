@@ -13,35 +13,6 @@ public class Month {
         return this.name;
     }
 
-    //I override the method equals to tell hashset that both are the same object.
-    /*@Override
-    public boolean equals(Object o) {
-        boolean answer = false;
-
-        if (o instanceof  Month) {
-            Month month = (Month) o;
-
-            if (this.name == month.name) {
-                answer = true;
-            } else {
-                answer = false;
-            }
-        } else {
-            answer = false;
-        }
-
-        return answer;
-    }
-
-
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name);
-    }
-
-
-     */
 
     @Override
     public boolean equals(Object o) {
