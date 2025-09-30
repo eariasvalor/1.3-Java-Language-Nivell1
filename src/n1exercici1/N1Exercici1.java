@@ -18,7 +18,7 @@ public class N1Exercici1 {
         HashSet<Month> list2 = convertIntoHashSet(list1);
         System.out.println("Arraylist converted into a HashSet:\n" + printHashSet(list2));
         newMonthToHashSet("August", list2);
-        System.out.println("Added a second August to the HashSet:\n" + printHashSet(list2));
+        System.out.println("Added a second August to the HashSet with no effect:\n" + printHashSet(list2));
 
         System.out.println("Here is the list obtained by means of a 'forEach':");
         for (Month m : list2) {
