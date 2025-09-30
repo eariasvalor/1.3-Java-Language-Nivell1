@@ -58,5 +58,9 @@ public class ReadFile {
         return countries.get(country);
     }
 
+    public void removeAnswers(String country) {
+        countries.remove(country);
+    }
+
 
 }

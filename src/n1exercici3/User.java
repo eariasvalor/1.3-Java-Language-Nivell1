@@ -1,5 +1,8 @@
 package n1exercici3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
     private  String name;
     private int score;
@@ -24,7 +27,8 @@ public class User {
     public void calculateScore(boolean result){
         if(result) {
             this.score++;
+        }
     }
 
-    }
+
 }
