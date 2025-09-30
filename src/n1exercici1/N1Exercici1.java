@@ -20,10 +20,11 @@ public class N1Exercici1 {
         newMonthToHashSet("August", list2);
         System.out.println("Added a second August to the HashSet:\n" + printHashSet(list2));
 
+        System.out.println("Here is the list obtained by means of a 'forEach':");
         for (Month m : list2) {
             System.out.println(m.getName());
         }
-
+        System.out.println("Here is the list obtained by means of an Iterator:");
         Iterator<Month> it = list2.iterator();
         while (it.hasNext()) {
             Month m = it.next();
