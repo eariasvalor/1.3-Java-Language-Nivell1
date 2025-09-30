@@ -48,9 +48,12 @@ public class ReadFile {
     public boolean checkAnswer(String country, String answer){
         boolean result = false;
         if(countries.get(country).equals(answer)){
+
             result = true;
         }
         return result;
         }
+
+
 
 }

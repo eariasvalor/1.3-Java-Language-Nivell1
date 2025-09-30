@@ -21,7 +21,10 @@ public class User {
         this.name = name;
     }
 
-    public void addPoint(){
-        this.score++;
+    public void calculateScore(boolean result){
+        if(result) {
+            this.score++;
+    }
+
     }
 }
