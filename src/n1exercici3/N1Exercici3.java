@@ -12,6 +12,7 @@ public class N1Exercici3 {
         boolean result = false;
         String country = "";
         String answer = "";
+        ScoreWriter writer = new ScoreWriter("src/resources/classification.txt");
 
         reader.feedCountries("src/resources/countries.txt");
 
@@ -34,5 +35,7 @@ public class N1Exercici3 {
 
             System.out.println("Your score is: " + user1.getScore());
         }
+
+        writer.saveScore(user1);
     }
 }
