@@ -20,16 +20,11 @@ public class N1Exercici1 {
         newMonthToHashSet("August", list2);
         System.out.println("Added a second August to the HashSet with no effect:\n" + printHashSet(list2));
 
-        System.out.println("Here is the list obtained by means of a 'forEach':");
-        for (Month m : list2) {
-            System.out.println(m.getName());
-        }
-        System.out.println("Here is the list obtained by means of an Iterator:");
-        Iterator<Month> it = list2.iterator();
-        while (it.hasNext()) {
-            Month m = it.next();
-            System.out.println(m.getName());
-        }
+        System.out.println("Here is the list obtained by means of a 'for':\n" + printListWithFor(list2) + "\n");
+
+
+        System.out.println("Here is the list obtained by means of an Iterator:\n" + printListWithIterator(list2));
+
 
 
 
@@ -97,6 +92,27 @@ public class N1Exercici1 {
     public static void newMonthToHashSet(String name, HashSet<Month> list){
 
         list.add(new Month(name));
+    }
+
+    public static String printListWithFor(HashSet<Month> list) {
+        String answer = "";
+
+        for (Month m : list) {
+            answer += m.getName() + "\n";
+        }
+
+        return answer;
+    }
+
+    public static String printListWithIterator(HashSet<Month> list) {
+        String answer = "";
+
+        Iterator<Month> it = list.iterator();
+        while (it.hasNext()) {
+            Month m = it.next();
+            answer += m.getName() + "\n";
+        }
+        return answer;
     }
 
 }
