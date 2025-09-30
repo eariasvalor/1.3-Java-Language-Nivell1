@@ -4,7 +4,10 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Random;
 
 public class ReadFile {
     private HashMap<String, String> countries = new HashMap<>();
@@ -33,4 +36,21 @@ public class ReadFile {
             System.out.println("Country: " + country + " → Capital: " + countries.get(country));
         }
     }
+
+    public String showRandomCountry(){
+        List<String> keys = new ArrayList<String>(countries.keySet());
+        Random random = new Random();
+        int randomIndex = random.nextInt(keys.size());
+        return keys.get(randomIndex);
+
+    }
+
+    public boolean checkAnswer(String country, String answer){
+        boolean result = false;
+        if(countries.get(country).equals(answer)){
+            result = true;
+        }
+        return result;
+        }
+
 }
