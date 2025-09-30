@@ -54,6 +54,9 @@ public class ReadFile {
         return result;
         }
 
+    public String getCapital(String country){
+        return countries.get(country);
+    }
 
 
 }
