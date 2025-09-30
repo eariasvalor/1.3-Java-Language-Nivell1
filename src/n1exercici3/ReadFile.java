@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 public class ReadFile {
-    private HashMap<String, String> countries = new HashMap<>();
+    private final HashMap<String, String> countries = new HashMap<>();
 
     public void feedCountries(String filePath){
         try(BufferedReader bufferedReader = new BufferedReader(
@@ -38,7 +38,7 @@ public class ReadFile {
     }
 
     public String showRandomCountry(){
-        List<String> keys = new ArrayList<String>(countries.keySet());
+        List<String> keys = new ArrayList<>(countries.keySet());
         Random random = new Random();
         int randomIndex = random.nextInt(keys.size());
         return keys.get(randomIndex);
@@ -48,9 +48,9 @@ public class ReadFile {
     public boolean checkAnswer(String country, String answer){
         boolean result = false;
         if(countries.get(country).equals(answer)){
-
             result = true;
         }
+
         return result;
         }
 
