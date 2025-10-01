@@ -14,7 +14,7 @@ public class ScoreWriter {
     public void saveScore(User user) {
         try(PrintWriter writer = new PrintWriter(new FileWriter(filePath,true))) {
             writer.println(user.getName() + " got a total of " + user.getScore() + " points.");
-            System.out.println("Total score successfully saved.");
+            System.out.println("Total score successfully saved in the following location: " + filePath);
         } catch (IOException e) {
             System.out.println("Error while writing file: " + e.getMessage());
         }
