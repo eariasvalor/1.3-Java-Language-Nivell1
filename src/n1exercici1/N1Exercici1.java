@@ -11,13 +11,12 @@ public class N1Exercici1 {
         System.out.println("ArrayList missing the month of August:\n" + printArrayList(list1));
 
 
-        //adding the month of August on position 7
-        addMonth(7, "August", list1);
+        list1.add(7, new Month("August"));
         System.out.println("ArrayList after adding the month of August:\n" + printArrayList(list1));
 
         HashSet<Month> list2 = convertIntoHashSet(list1);
         System.out.println("Arraylist converted into a HashSet:\n" + printHashSet(list2));
-        newMonthToHashSet("August", list2);
+        list2.add(new Month("August"));
         System.out.println("Added a second August to the HashSet with no effect:\n" + printHashSet(list2));
 
         System.out.println("Here is the list obtained by means of a 'for':\n" + printListWithFor(list2) + "\n");
@@ -31,7 +30,7 @@ public class N1Exercici1 {
     }
 
     public static ArrayList createArrayList(){
-        ArrayList<Month> months = new ArrayList<Month>();
+        ArrayList<Month> months = new ArrayList<>();
         months.add(new Month("January"));
         months.add(new Month("February"));
         months.add(new Month("March"));
@@ -57,9 +56,7 @@ public class N1Exercici1 {
         return answer;
     }
 
-    public static void addMonth(int index, String name, ArrayList<Month> list){
-        list.add(index, new Month(name));
-    }
+
 
     public static HashSet<Month> convertIntoHashSet(ArrayList<Month> list){
         HashSet<Month> months2 = new HashSet<>();
@@ -89,10 +86,6 @@ public class N1Exercici1 {
         return answer;
     }
 
-    public static void newMonthToHashSet(String name, HashSet<Month> list){
-
-        list.add(new Month(name));
-    }
 
     public static String printListWithFor(HashSet<Month> list) {
         String answer = "";
