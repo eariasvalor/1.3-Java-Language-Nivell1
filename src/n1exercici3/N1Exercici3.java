@@ -13,7 +13,7 @@ public class N1Exercici3 {
         boolean result = false;
         String country = "";
         String answer = "";
-        ScoreWriter writer = new ScoreWriter("src/resources/classification.txt");
+
 
 
         reader.feedCountries("src/resources/countries.txt");
@@ -27,6 +27,10 @@ public class N1Exercici3 {
             country = reader.showRandomCountry();
             System.out.println("What's the capital of " + country + "?");
             answer = scanner.nextLine();
+            if (answer.isEmpty()){
+                System.out.println("The answer cannot be empty. Please try again.");
+                answer = scanner.nextLine();
+            }
             result = reader.checkAnswer(country, answer);
             user1.calculateScore(result);
             if(result) {
@@ -37,7 +41,7 @@ public class N1Exercici3 {
             reader.removeAnswers(country);
             System.out.println("Your actual score is: " + user1.getScore());
         }
-
+        ScoreWriter writer = new ScoreWriter("src/resources/classification.txt");
         writer.saveScore(user1);
     }
 }
