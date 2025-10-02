@@ -6,6 +6,9 @@ public class Month {
     private String name;
 
     public Month(String name) {
+        if(name == null || name.isBlank()){
+            throw new IllegalArgumentException("The name cannot be null or blank");
+        }
         this.name = name;
     }
 
