@@ -3,11 +3,12 @@ package n1exercici1;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 
 public class N1Exercici1 {
     public static void main (String[] args){
 
-        ArrayList<Month> list1 = createArrayList();
+        ArrayList<Month> list1 = createListOfMonths();
         System.out.println("ArrayList missing the month of August:\n" + printArrayList(list1));
 
 
@@ -29,7 +30,7 @@ public class N1Exercici1 {
 
     }
 
-    public static ArrayList createArrayList(){
+    public static List<Month> createListOfMonths(){
         ArrayList<Month> months = new ArrayList<>();
         months.add(new Month("January"));
         months.add(new Month("February"));
