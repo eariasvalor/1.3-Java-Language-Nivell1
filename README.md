@@ -57,38 +57,46 @@ Donat el fitxer countries.txt (vegeu l'apartat Recursos) que conté parelles de 
 🛠️ Instal·lació
 
 1. Clona aquest repositori:
-   git clone <URL-del-repositori>
-2. Accedeix al directori del projecte:
+```bash
+git clone <URL-del-repositori>
+cd <nom-de-l'exercici>
+```
+3. Accedeix al directori del projecte:
+   ```bash
    cd <nom-de-l'exercici>
-3. Comprova que tens Java instal·lat:
+   ```
+5. Comprova que tens Java instal·lat:
+   ```bash
    java -version
+   ```
 
 -----------------------------------
 
 ▶️ Execució
 
 1. Compila el projecte:
+   ```bash
    javac *.java
-2. Executa la classe principal:
+   ```
+3. Executa la classe principal:
+   ```bash
    java <nom-de-la-classe>
-
-🌐 Desplegament
-
-Per desplegar el projecte en un entorn de producció o servidor:
-1. Empaqueta el projecte en un .jar:
-   jar cfe <nom-exercici>.jar <nom-exercici> *.class
-2. Puja l’arxiu .jar al servidor.
-3. Executa’l amb:
-   java -jar <exercici>.jar
+   ```
 
 🤝 Contribucions
 
 Les contribucions són benvingudes! Si vols participar:
 1. Fes un fork del repositori.
 2. Crea una nova branca:
+   ```bash
    git checkout -b feature/NovaFuncionalitat
-3. Fes els teus canvis i commiteja’ls:
+   ```
+4. Fes els teus canvis i commiteja’ls:
+   ```bash
    git commit -m 'Afegeix Nova Funcionalitat'
-4. Puja els canvis a la teva branca:
+   ```
+5. Puja els canvis a la teva branca:
+   ```bash
    git push origin feature/NovaFuncionalitat
-5. Fes un pull request.
+   ```
+6. Fes un pull request.
