@@ -1,24 +1,21 @@
 package n1exercici1;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class N1Exercici1 {
     public static void main (String[] args){
 
         ArrayList<Month> list1 = createListOfMonths();
-        System.out.println("ArrayList missing the month of August:\n" + printArrayList(list1));
+        System.out.println("ArrayList missing the month of August:\n" + getListOfMonths(list1));
 
 
         list1.add(7, new Month("August"));
-        System.out.println("ArrayList after adding the month of August:\n" + printArrayList(list1));
+        System.out.println("ArrayList after adding the month of August:\n" + getListOfMonths(list1));
 
         HashSet<Month> list2 = convertIntoHashSet(list1);
-        System.out.println("Arraylist converted into a HashSet:\n" + printHashSet(list2));
+        System.out.println("Arraylist converted into a HashSet:\n" + getListOfMonths(list2));
         list2.add(new Month("August"));
-        System.out.println("Added a second August to the HashSet with no effect:\n" + printHashSet(list2));
+        System.out.println("Added a second August to the HashSet with no effect:\n" + getListOfMonths(list2));
 
         System.out.println("Here is the list obtained by means of a 'for':\n" + printListWithFor(list2) + "\n");
 
@@ -47,14 +44,14 @@ public class N1Exercici1 {
         return months;
     }
 
-    public static String printArrayList(ArrayList<Month> arrayList){
-        String answer = "";
+    public static String getListOfMonths(Collection<Month> list) {
+        StringBuilder sb = new StringBuilder();
 
-        for (Month m : arrayList) {
-           answer += m.getName() + "\n";
+        for (Month m : list) {
+            sb.append(m.getName()).append("\n");
         }
 
-        return answer;
+        return sb.toString();
     }
 
 
@@ -78,14 +75,6 @@ public class N1Exercici1 {
 
     }
 
-    public static String printHashSet(HashSet<Month> hashSet){
-        String answer = "";
-        for (Month m : hashSet) {
-            answer += m.getName() + "\n";
-        }
-
-        return answer;
-    }
 
 
     public static String printListWithFor(HashSet<Month> list) {
