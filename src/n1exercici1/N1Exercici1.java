@@ -5,7 +5,7 @@ import java.util.*;
 public class N1Exercici1 {
     public static void main (String[] args){
 
-        ArrayList<Month> list1 = createListOfMonths();
+        List<Month> list1 = createListOfMonths();
         System.out.println("ArrayList missing the month of August:\n" + getListOfMonths(list1));
 
 
@@ -56,7 +56,7 @@ public class N1Exercici1 {
 
 
 
-    public static HashSet<Month> convertIntoHashSet(ArrayList<Month> list){
+    public static HashSet<Month> convertIntoHashSet(List<Month> list){
         HashSet<Month> months2 = new HashSet<>();
         months2.add(new Month(list.get(0).getName()));
         months2.add(new Month(list.get(1).getName()));
