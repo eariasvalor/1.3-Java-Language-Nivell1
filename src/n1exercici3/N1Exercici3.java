@@ -13,6 +13,7 @@ public class N1Exercici3 {
         boolean result = false;
         String country = "";
         String answer = "";
+        int roundNum = 10;
 
 
 
@@ -23,7 +24,7 @@ public class N1Exercici3 {
         User user1 = new User(scanner.nextLine());
 
 
-        for (int i  = 0; i < 10; i++){
+        for (int i  = 0; i < roundNum; i++){
             country = reader.showRandomCountry();
             System.out.println("What's the capital of " + country + "?");
             answer = scanner.nextLine();
