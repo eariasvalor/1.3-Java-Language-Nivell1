@@ -4,13 +4,10 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class ReadFile {
-    private final HashMap<String, String> countries = new HashMap<>();
+    private final Map<String, String> countries = new HashMap<>();
 
     public void feedCountries(String filePath){
         try(BufferedReader bufferedReader = new BufferedReader(
